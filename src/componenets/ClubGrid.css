@@ -1,0 +1,63 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.club-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 100%; /* Let grid handle sizing */
+  height: 200px;
+}
+
+.club-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.club-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+
+.club-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #004aad;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .grid-container {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .club-card {
+    height: 150px;
+  }
+
+  .club-card img {
+    width: 60px;
+    height: 60px;
+  }
+}
